@@ -1,0 +1,19 @@
+nav {
+	display: flex;
+	justify-content: space-evenly;
+}
+.menuItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid darkcyan;
+	color:darkcyan;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+.checked {
+	background-color: darkcyan;
+	color: white;
+}

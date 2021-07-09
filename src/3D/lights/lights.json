@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Directional Light",
+		"type": "DirectionalLight"
+	},
+	{
+		"name": "Hemisphere Light",
+		"type": "HemisphereLight"
+	},
+	{
+		"name": "Ambient Light",
+		"type": "AmbientLight"
+	},
+	{
+		"name": "Point Light",
+		"type": "PointLight"
+	},
+	{
+		"name": "Spot Light",
+		"type": "SpotLight"
+	},
+	{
+		"name": "Helpers enabled",
+		"type": "enableHelpers"
+	}
+]
