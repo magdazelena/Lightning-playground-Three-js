@@ -1,3 +1,4 @@
+
 nav {
 	display: flex;
 	justify-content: space-evenly;
@@ -7,13 +8,14 @@ nav {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	border: 1px solid darkcyan;
-	color:darkcyan;
+	border: 1px solid #9055A2;
+	color:#9055A2;
 	border-radius: 5px;
 	padding: 10px;
 	margin: 10px;
+	cursor: pointer;
 }
 .checked {
-	background-color: darkcyan;
+	background-color: #9055A2;
 	color: white;
 }
