@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './index.css'
-import lights from '../../3D/lights/lights.json'
 const Menu = (props) => {
-	const { onChange } = props
+	const { onChange, items, orientation } = props
 	const [checkedList, setCheckedList] = useState([])
 
 	const toggleCheck = (e) => {
@@ -16,16 +15,16 @@ const Menu = (props) => {
 		onChange(checkedList)
 	}, [checkedList])
 
-	return (<nav>
-		{lights.map(light => <div
+	return (<nav className={orientation}>
+		{items.map(item => <div
 			className={`menuItem
-			${checkedList.includes(light.type) ? 'checked' : 'unchecked'}
+			${checkedList.includes(item.type) ? 'checked' : 'unchecked'}
 			`}
-			key={light.type}
-			id={light.type}
+			key={item.type}
+			id={item.type}
 			onClick={toggleCheck}
 		>
-			{light.name}
+			{item.name}
 		</div>)}
 	</nav>)
 }

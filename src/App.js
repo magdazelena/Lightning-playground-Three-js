@@ -5,6 +5,7 @@ import Cube from './3D/objects/Cube';
 import Menu from './components/Menu';
 import color from './utils/colors.json'
 import Lights from './3D/lights';
+import lights from './3D/lights/lights.json'
 const App = () => {
   const [selection, setSelection] = useState([])
   extend({ OrbitControls })
@@ -19,7 +20,7 @@ const App = () => {
   };
   return (
     <>
-      <Menu onChange={setSelection} />
+      <Menu items={lights} orientation='horizontal' onChange={setSelection} />
       <div className="background">
         <Canvas style={{ background: color.purple }}>
           <CameraControls />
