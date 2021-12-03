@@ -1,3 +1,3 @@
-# Template for working with Three in React
+# Lightning playgorund with Three js
 
 ## WIP
