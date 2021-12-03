@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Cube",
+    "type": "cube"
+  },
+  {
+    "name": "Sphere",
+    "type": "sphere"
+  },
+  {
+    "name": "Head",
+    "type": "head"
+  }
+]
