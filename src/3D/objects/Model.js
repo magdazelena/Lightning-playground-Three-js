@@ -14,6 +14,7 @@ export default function Model(props) {
       if (c.type === "Mesh") {
         const _c = c
         g = _c.geometry;
+        g.center()
       }
     });
     return g
