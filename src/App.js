@@ -7,9 +7,13 @@ import Lights from './3D/lights';
 import lights from './3D/lights/lights.json'
 import Shape from './3D/objects';
 import shapes from './3D/objects/shapes.json'
+import { SketchPicker } from 'react-color';
 const App = () => {
   const [selection, setSelection] = useState([])
   const [shapeSelection, setShapeSelection] = useState('')
+  const [modelColorBase, setModelColorBase] = useState(color.lavender)
+  const [modelColorEmitt, setModelColorEmitt] = useState(color.violet)
+  const [hasEmitt, setEmitt] = useState(false)
   extend({ OrbitControls })
   const CameraControls = () => {
     const {
@@ -28,8 +32,18 @@ const App = () => {
         <Canvas style={{ background: color.purple }}>
           <CameraControls />
           <Lights selection={selection} />
-          <Shape type={shapeSelection} color={color.lavender} color2={color.violet} />
+          <Shape type={shapeSelection} color={modelColorBase} color2={hasEmitt ? modelColorEmitt : null} />
         </Canvas>
+        <div className='colorpicker basecolor'>
+          <p>Model base color</p>
+          <SketchPicker color={modelColorBase} onChange={color => setModelColorBase(color.hex)} />
+        </div>
+        <div className='colorpicker emittcolor'>
+          <p>Model emitt color
+            <input type='checkbox' onChange={() => setEmitt(!hasEmitt)} /> Enable
+          </p>
+          <SketchPicker color={modelColorEmitt} onChange={color => setModelColorEmitt(color.hex)} />
+        </div>
       </div>
     </>
   );

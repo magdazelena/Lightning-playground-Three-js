@@ -6,7 +6,6 @@ export default function Model(props) {
   const { url, material } = props
   const obj = useLoader(OBJLoader, url)
 
-
   const geometry = useMemo(() => {
     let g = null
     if (!obj) return null
@@ -19,8 +18,6 @@ export default function Model(props) {
     });
     return g
   }, [obj])
-
-
 
   return (
     <mesh geometry={geometry} scale={1}>

@@ -8,3 +8,17 @@ body {
 	height: 100vh;
 	position: fixed;
 }
+.colorpicker {
+	position: fixed;
+}
+.colorpicker p {
+	color: whitesmoke
+}
+.basecolor {
+	bottom: 10px;
+	right: 240px;
+}
+.emittcolor {
+	bottom: 10px;
+	right: 10px;
+}
