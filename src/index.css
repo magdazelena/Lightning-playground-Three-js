@@ -7,11 +7,15 @@ body {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
+	overflow: visible;
 }
 .colorpicker {
 	position: fixed;
 }
-.colorpicker p {
+.lightcolor {
+	z-index: 20000;
+}
+.colorpicker p, .lightcolor p {
 	color: whitesmoke
 }
 .basecolor {
@@ -21,4 +25,8 @@ body {
 .emittcolor {
 	bottom: 10px;
 	right: 10px;
+}
+.hemispherelight {
+	top: -20vh;
+	left: -22vw
 }
