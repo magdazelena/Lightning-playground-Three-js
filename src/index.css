@@ -39,3 +39,6 @@ body {
 .pointlight {
 	left: 32vw
 }
+.ambientlight {
+	left: -22vw;
+}
