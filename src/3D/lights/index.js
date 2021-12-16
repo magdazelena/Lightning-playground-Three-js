@@ -17,11 +17,21 @@ const Lights = (props) => {
   }, [selection])
 
   return (<>
-    {enabled.includes('HemisphereLight') && (<HemisphereLight enableHelper={enabled.includes('enableHelpers')} />)}
-    {enabled.includes('AmbientLight') && (<AmbientLight enableHelper={enabled.includes('enableHelpers')} />)}
-    {enabled.includes('DirectionalLight') && (<DirectionalLight enableHelper={enabled.includes('enableHelpers')} />)}
-    {enabled.includes('SpotLight') && (<SpotLight enableHelper={enabled.includes('enableHelpers')} />)}
-    {enabled.includes('PointLight') && (<PointLight enableHelper={enabled.includes('enableHelpers')} />)}
+    {enabled.includes('HemisphereLight') && (<HemisphereLight
+      modify={enabled.includes('colorpicker')}
+      enableHelper={enabled.includes('enableHelpers')} />)}
+    {enabled.includes('AmbientLight') && (<AmbientLight
+      modify={enabled.includes('colorpicker')}
+      enableHelper={enabled.includes('enableHelpers')} />)}
+    {enabled.includes('DirectionalLight') && (<DirectionalLight
+      modify={enabled.includes('colorpicker')}
+      enableHelper={enabled.includes('enableHelpers')} />)}
+    {enabled.includes('SpotLight') && (<SpotLight
+      modify={enabled.includes('colorpicker')}
+      enableHelper={enabled.includes('enableHelpers')} />)}
+    {enabled.includes('PointLight') && (<PointLight
+      modify={enabled.includes('colorpicker')}
+      enableHelper={enabled.includes('enableHelpers')} />)}
   </>)
 }
 

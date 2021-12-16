@@ -5,7 +5,7 @@ import color from '../../utils/colors.json'
 import LightControls from './LightControls'
 
 const HemisphereLight = (props) => {
-	const { enableHelper } = props
+	const { enableHelper, modify } = props
 	const [mainColor, setColor] = useState(color.powder)
 	const [groundColor, setGroundColor] = useState(color.dark)
 	const [intensity, setIntensity] = useState(100)
@@ -13,12 +13,12 @@ const HemisphereLight = (props) => {
 	useHelper(enableHelper ? light : {}, THREE.HemisphereLightHelper, 5, 'white')
 	return (<>
 		<hemisphereLight ref={light} color={mainColor} groundColor={groundColor} intensity={intensity / 100} />
-		<LightControls
+		{modify && <LightControls
 			name='hemisphere'
 			updateMainColor={setColor}
 			updateGroundColor={setGroundColor}
 			updateIntensity={setIntensity}
-		/>
+		/>}
 	</>
 	)
 }
