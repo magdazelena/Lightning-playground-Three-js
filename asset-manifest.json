@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lights-playground/static/css/main.59b092ef.css",
+    "main.js": "/lights-playground/static/js/main.5572bd42.js",
+    "index.html": "/lights-playground/index.html",
+    "main.59b092ef.css.map": "/lights-playground/static/css/main.59b092ef.css.map",
+    "main.5572bd42.js.map": "/lights-playground/static/js/main.5572bd42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59b092ef.css",
+    "static/js/main.5572bd42.js"
+  ]
+}
