@@ -28,5 +28,9 @@ body {
 }
 .hemispherelight {
 	top: -20vh;
-	left: -22vw
+	left: -32vw
+}
+.directionallight {
+	top: -20vh;
+	left: -42vw
 }
