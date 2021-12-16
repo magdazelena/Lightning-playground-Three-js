@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import THREE from '../three'
-import { Html, useHelper } from '@react-three/drei'
+import { useHelper } from '@react-three/drei'
 import color from '../../utils/colors.json'
-import { ChromePicker } from 'react-color'
+import LightControls from './LightControls'
 
 const HemisphereLight = (props) => {
 	const { enableHelper } = props
@@ -13,18 +13,12 @@ const HemisphereLight = (props) => {
 	useHelper(enableHelper ? light : {}, THREE.HemisphereLightHelper, 5, 'white')
 	return (<>
 		<hemisphereLight ref={light} color={mainColor} groundColor={groundColor} intensity={intensity / 100} />
-		<Html as='div' center className='hemispherelight lightcolor'>
-			<p>Hemisphere base color</p>
-			<ChromePicker color={mainColor} onChange={color => setColor(color.hex)} />
-			<p>Hemisphere ground color</p>
-			<ChromePicker color={groundColor} onChange={color => setGroundColor(color.hex)} />
-
-			<p><label for="intensity">Intensity: {intensity / 100}</label></p>
-			<input type="range" id="intensity" name="intensity"
-				value={intensity}
-				onChange={e => setIntensity(e.target.value)}
-				min="0" max="100" />
-		</Html>
+		<LightControls
+			name='hemisphere'
+			updateMainColor={setColor}
+			updateGroundColor={setGroundColor}
+			updateIntensity={setIntensity}
+		/>
 	</>
 	)
 }
