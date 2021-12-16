@@ -15,6 +15,7 @@ export default function LightControls(props) {
   }, [mainColor, updateMainColor])
 
   useEffect(() => {
+    if (!updateGroundColor) return
     if (groundColor) updateGroundColor(groundColor)
   }, [groundColor, updateGroundColor])
 
