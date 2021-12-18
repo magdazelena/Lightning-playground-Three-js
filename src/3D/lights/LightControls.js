@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Html } from '@react-three/drei'
 import { ChromePicker } from 'react-color'
 import color from '../../utils/colors.json'
-import { useEffect } from 'react/cjs/react.development'
 
 export default function LightControls(props) {
   const { updateMainColor, updateGroundColor, updateIntensity, name, updatePosition, initialPosition } = props
